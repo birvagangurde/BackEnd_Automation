@@ -15,9 +15,9 @@ with open('C:\\Users\\BIRVA\\Downloads\\BackEndAutomation_Part1\\BackEndAutomati
         print(course)
         if course['title'] == "RPA":
             print(course['price'])
-            assert course['price'] == 45
+            assert course['price'] == 450
 
-# Actual code for this file:
+# Actual code for this file: -----------------------------------------
 
 with open('C:\\Users\\BIRVA\\Downloads\\BackEndAutomation_Part1\\BackEndAutomation\\course1.json') as fi:
     data2 = json.load(fi)

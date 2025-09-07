@@ -1,4 +1,5 @@
 # ****** Parse content present in Json file
+
 import json
 
 with open('C:\\Users\\BIRVA\\Downloads\\BackEndAutomation_Part1\\BackEndAutomation\\course.json') as f:
@@ -8,6 +9,12 @@ with open('C:\\Users\\BIRVA\\Downloads\\BackEndAutomation_Part1\\BackEndAutomati
     print(data['courses'][1]['title'])
     print(data['dashboard']['website'])
     print(type(data['dashboard']))
+
+
+    '''
+    load() → works with file objects
+    loads() → works with strings
+    '''
 
 
 

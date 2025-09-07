@@ -8,9 +8,10 @@ with open('C:\\Users\\BIRVA\\Downloads\\BackEndAutomation_Part1\\BackEndAutomati
     print(data['courses'][1]['title'])
     print(data['dashboard']['website'])
     print(type(data['dashboard']))
-
     print(type(data['courses']))
+
     # The price of course "RPA"
+
     for course in data['courses']:
         print(course)
         if course['title'] == "RPA":

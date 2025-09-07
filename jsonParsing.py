@@ -1,9 +1,15 @@
 import json
 
+
+# o	JSON is stored inside a Python string (in quotes)
 courses = '{"name": "RahulShetty", "languages": ["Java", "Python"]}'
+print(courses[0])
 
-# Loads method parse json string and returns dict
+# Loads method parse json string and returns dictionary
+#Now you can access values with keys.
 
+
+# Parsing API responses (usually JSON strings → use loads)
 dict_courses = json.loads(courses)
 
 print(type(dict_courses))

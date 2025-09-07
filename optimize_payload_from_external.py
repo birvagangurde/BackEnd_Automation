@@ -6,12 +6,13 @@ import requests
 
 # this time our http method is Post
 from post_http_rpayload3 import addBookPayload
-
+from utilities.resources import *
 from utilities.configurations import *
-
-addBook_response = requests.post(getConfig()['API']['endpoint'] + '/Library/Addbook.php', json=addBookPayload("bhdt"),
-                                 headers={'Content-Type': "application/json"}
-                                 )
+# '/Library/Addbook.php'
+url = getConfig()['API']['endpoint'] + ApiResources.addBook
+headers = {'Content-Type': "application/json"}
+addBook_response = requests.post( json=addBookPayload("bhdt"),
+                                 headers=headers)
 
 # The combination should be unique of the json code added otherwise it will state the book already exists
 # We have given parameters here for post method and also took the first json code in Library API doc

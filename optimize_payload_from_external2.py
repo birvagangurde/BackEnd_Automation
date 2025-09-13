@@ -1,28 +1,29 @@
-# We'll have to delete the book in the part
-import json
-import configparser
+# 48th Video
 
 import requests
 
 # this time our http method is Post
 from post_http_rpayload3 import addBookPayload
+from post_http_rpayload4 import buildPayLoadFromDB
 from utilities.resources import *
 from utilities.configurations import *
 # '/Library/Addbook.php'
 url = getConfig()['API']['endpoint'] + ApiResources.addBook
+print(url)
 headers = {'Content-Type': "application/json"}
-addBook_response = requests.post( json=addBookPayload("bhdt"), headers=headers)
+query = 'select * from Books'
+addBook_response = requests.post(url, json=buildPayLoadFromDB(query), headers=headers)
 
 # The combination should be unique of the json code added otherwise it will state the book already exists
 # We have given parameters here for post method and also took the first json code in Library API doc
 
-print(addBook_response.json())
+print(addBook_response.json())   #{'Msg': 'Book Already Exists', 'ID': 'bnid3475'}
 
 response_json = addBook_response.json()
-print(type(response_json))
+print(type(response_json))   #<class 'dict'>
 
 bookID = response_json['ID']
-print(bookID)
+print(bookID)  #bnid3475
 
 # Delete Book: ------------------------------------------------------------------------------------------------------------
 

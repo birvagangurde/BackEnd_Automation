@@ -17,6 +17,7 @@ response = requests.get('http://216.10.245.166/Library/GetBook.php',
 json_response = response.json()
 print(type(json_response))
 
+print(response.status_code)
 #######################################################################################
 
 assert response.status_code == 200

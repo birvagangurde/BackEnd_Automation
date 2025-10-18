@@ -4,9 +4,10 @@ import json
 # o	JSON is stored inside a Python string (in quotes)
 courses = '{"name": "RahulShetty", "languages": ["Java", "Python"]}'
 print(courses[0])
-
+print(courses)
 # Loads method parse json string and returns dictionary
 #Now you can access values with keys.
+
 
 
 # Parsing API responses (usually JSON strings → use loads)

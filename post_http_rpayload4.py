@@ -3,15 +3,16 @@
 from utilities.configurations2 import *
 
 
-def addBookPayload(isbn):
+def addBookPayload(isbn,aisle):
     body = {
 
-        "name": "Test Book for Matts practice",
+        "name": "Learn Appium Automation with Java",
         "isbn": isbn,
-        "aisle": "2re57",
+        "aisle": aisle,
         "author": "John foe"
     }
     return body
+
 
 
 def buildPayLoadFromDB(query):

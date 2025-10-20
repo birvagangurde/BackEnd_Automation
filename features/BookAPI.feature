@@ -9,4 +9,14 @@ Feature: Verify if Books are added and deleted using Library API
         When we execute the AddBook PostAPI method
         Then book is successfully added
 
+    Scenario Outline: Verify AddBook API functionality
+        Given the Book details with <isbn> and <aisle>
+        When we execute the AddBook PostAPI method
+        Then book is successfully added
+        Examples:
+        | isbn | aisle |
+        | fdfee| 8948  |
+        | powr | 76333 |
+
+
 

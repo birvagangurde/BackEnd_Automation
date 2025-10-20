@@ -10,7 +10,7 @@ def step_impl(context):
     #
     context.url = getConfig()['API']['endpoint'] + ApiResources.addBook
     context.headers = {"Content-Type": "application/json"}
-    context.payLoad = addBookPayload("mbroo", "4373");
+    context.payLoad = addBookPayload("mbrode", "4373");
 
 
 @when('we execute the AddBook PostAPI method')

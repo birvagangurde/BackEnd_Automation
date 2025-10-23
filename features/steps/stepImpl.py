@@ -27,8 +27,10 @@ def step_impl(context):
     print(response_json["Msg"])
     assert response_json["Msg"] == "successfully added"
 
+# 55 Video
 @given('the Book details with {isbn} and {aisle}')
 def step_impl(context,isbn,aisle):
     context.url = getConfig()['API']['endpoint'] + ApiResources.addBook
     context.headers = {"Content-Type": "application/json"}
     context.payLoad = addBookPayload(isbn, aisle);
+

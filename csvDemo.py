@@ -8,8 +8,10 @@ with open('utilities/loanapp.csv') as csvFile:
     names = []
     stats = []
     for row in csvReader:
-        names.append(row[0])
-        stats.append(row[1])
+        if len(row) < 2:
+            continue   # skip empty or incomplete rows
+        names.append(row[0].strip())
+        stats.append(row[1].strip())
 
 print(names)
 print(stats)
